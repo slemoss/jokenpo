@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokenpo-Game</title>
+    <style> 
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: default;
+        }
+        #main{
+            margin: 25px;
+        }
+
+        #title{
+            text-align: center;
+        }
+
+        #score{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #player1, #player2{
+            flex-grow: 3;
+            border-radius: 5px;
+        }
+
+        #player1 #nickName, #player2 #nickNamePc{
+            margin: 0;
+            padding: 0px 0px 0px 20px;
+            font-size: 24px;
+            display: inline;
+        }
+
+        #playerPoints, #pcPoints{
+            font-size: 30px;
+        }
+
+        #player1 #optionsPpt, #player2 #optionsPpt{
+            list-style: none;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        #player1 #optionsPpt li, #player2 #optionsPpt li{
+            display: inline;
+            padding: 0 15px;
+        }
+
+        #player1 img, #player2 img{
+            width: 40px;
+        }
+
+        #player1 #optionsPpt a, #player2 #optionsPpt a{
+            opacity: .2;
+        }
+
+        #player1 #optionsPpt a:hover, #player2 #optionsPpt a:hover,
+        #player1 #optionsPpt a.selecionado, #player2 #optionsPpt a.selecionado{
+            opacity: 1;
+
+        }
+
+        #player1{
+            background-color: rgba(0, 0, 255, 0.515);
+        }
+
+        #versus{
+            font-size: 50px;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        #player2{
+            background-color: rgba(255, 0, 0, 0.515);
+        }
+
+        #post{
+            background-color: rgba(128, 128, 128, 0.308);
+            text-align: center;
+            border-radius: 5px;
+            font-size: 24px;
+            margin: 20px;
+            padding: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="main">
+
+        <div id="title">
+            <h1>Pedra, Papel e Tesoura</h1>
+        </div>
+        <div id="score">
+            <div id="player1">
+                <!--
+                -->
+                <h2 id="nickName">Player1:</h2>
+                <span id="playerPoints">0</span>
+                <ul id="optionsPpt">
+                    <li><a id="playerOption1"><img src="img/pedra.png"></a></li>
+                    <li><a id="playerOption2"><img src="img/papel.png"></a></li>
+                    <li><a id="playerOption3"><img src="img/tesoura.png"></a></li>
+                </ul>
+            </div>
+            <div id="versus">
+                <!--
+                -->
+                vs
+            </div>
+            <div id="player2">
+                <!--
+                -->
+                <h2 id="nickNamePc">Maquina:</h2>
+                <span id="pcPoints">0</span>
+                <ul id="optionsPpt">
+                    <li><a id="pcOption1"><img src="img/pedra.png"></a></li>
+                    <li><a id="pcOption2" ><img src="img/papel.png"></a></li>
+                    <li><a id="pcOption3"><img src="img/tesoura.png"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="post">
+            ...
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
